@@ -11,3 +11,41 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
 fi
 
 # Customize to your needs...
+
+# z
+source $HOME/git/z/z.sh
+
+# pipe into clipboard
+alias cb='xclip -selection clipboard'
+
+# open multiple files in tabs
+alias vim='vim -p'
+
+# command not found
+[ -f /etc/zsh_command_not_found ] && . /etc/zsh_command_not_found
+
+# grep recursively in PWD
+grpwd() {
+	\grep --color=auto --exclude-dir={.bzr,.cvs,.git,.hg,.svn} -n -r "$@" .
+}
+
+# arrow keys browse *local* history
+# https://superuser.com/questions/446594/separate-up-arrow-lookback-for-local-and-global-zsh-history
+bindkey "${terminfo[kcuu1]}" up-line-or-local-history
+bindkey "${terminfo[kcud1]}" down-line-or-local-history
+
+up-line-or-local-history() {
+    zle set-local-history 1
+    zle up-line-or-history
+    zle set-local-history 0
+}
+zle -N up-line-or-local-history
+down-line-or-local-history() {
+    zle set-local-history 1
+    zle down-line-or-history
+    zle set-local-history 0
+}
+zle -N down-line-or-local-history
+
+# show full time
+alias ls="${aliases[ls]:-ls} --time-style=full-iso"
