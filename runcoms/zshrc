@@ -26,6 +26,11 @@ grpwd() {
 	\grep --color=auto --exclude-dir={.bzr,.cvs,.git,.hg,.svn} -n -r "$@" .
 }
 
+# search for ACL bibliography entries in bibtex format
+bsb() {
+	bibsearch search "$@" -b
+}
+
 # arrow keys browse *local* history
 # https://superuser.com/questions/446594/separate-up-arrow-lookback-for-local-and-global-zsh-history
 bindkey "${terminfo[kcuu1]}" up-line-or-local-history
