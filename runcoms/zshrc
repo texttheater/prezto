@@ -45,3 +45,13 @@ zle -N down-line-or-local-history
 
 # show full time
 alias ls="${aliases[ls]:-ls} --time-style=full-iso"
+
+# virtualenvwrapper
+# Assumes virtualenv, virtualenvwrapper have been installed with:
+#     pip3 install --user virtualenv virtualenvwrapper
+# Do not use Ubuntu 18.04's virtualenv package, it seems to be broken with
+# Python 3.
+export WORKON_HOME=$HOME/.virtualenvs
+export PROJECT_HOME=$HOME/git
+export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
+source $HOME/.local/bin/virtualenvwrapper.sh
