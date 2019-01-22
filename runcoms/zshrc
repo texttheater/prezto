@@ -21,11 +21,6 @@ alias cb='xclip -selection clipboard'
 # open multiple files in tabs
 alias vim='vim -p'
 
-# grep recursively in PWD
-grpwd() {
-	\grep --color=auto --exclude-dir={.bzr,.cvs,.git,.hg,.svn} -n -r "$@" .
-}
-
 # search for ACL bibliography entries in bibtex format
 bsb() {
 	bibsearch search "$@" -b
