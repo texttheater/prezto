@@ -10,6 +10,7 @@ if [[ ( "$SHLVL" -eq 1 && ! -o LOGIN ) && -s "${ZDOTDIR:-$HOME}/.zprofile" ]]; t
   source "${ZDOTDIR:-$HOME}/.zprofile"
 fi
 
+# path
 path=('/home/ke/Dropbox/bin' $path)
 path=('/home/ke/.local/bin' $path)
 export PATH
