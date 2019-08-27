@@ -36,7 +36,8 @@ zstyle ':prezto:load' pmodule \
   'utility' \
   'completion' \
   'prompt' \
-  'command-not-found'
+  'command-not-found' \
+  'syntax-highlighting'
 
 #
 # Autosuggestions
