@@ -55,3 +55,9 @@ export WORKON_HOME=$HOME/.virtualenvs
 export PROJECT_HOME=$HOME/git
 export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
 source $HOME/.local/bin/virtualenvwrapper.sh
+
+# reset terminal to start state (deactive virtualenv and go to home directory)
+workoff() {
+  deactivate
+  cd
+}
