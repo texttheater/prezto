@@ -14,3 +14,7 @@ fi
 path=('/home/ke/Dropbox/bin' $path)
 path=('/home/ke/.local/bin' $path)
 export PATH
+
+if [[ -f "${ZDOTDIR:-$HOME}/.zshenv_local" ]]; then
+  source "${ZDOTDIR:-$HOME}/.zshenv_local"
+fi
