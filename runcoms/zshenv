@@ -15,6 +15,7 @@ path=('/home/ke/Dropbox/bin' $path)
 path=('/home/ke/.local/bin' $path)
 export PATH
 
+# local environment (not in Git)
 if [[ -f "${ZDOTDIR:-$HOME}/.zshenv_local" ]]; then
   source "${ZDOTDIR:-$HOME}/.zshenv_local"
 fi
