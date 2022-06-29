@@ -11,3 +11,53 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
 fi
 
 # Customize to your needs...
+
+# z
+. ~/git/z/z.sh
+
+# default user
+DEFAULT_USER=ke
+
+# editor
+EDITOR=vim
+VISUAL=vim
+
+# path
+PATH=~/Dropbox/bin:$PATH
+
+# direnv
+eval "$(direnv hook zsh)"
+
+# pyenv
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
+
+# pyenv-virtualenv
+eval "$(pyenv virtualenv-init -)"
+
+# tmux helper
+t() {
+  tmux attach -t $1 || tmux new -s $1
+}
+alias tl="tmux list-sessions"
+
+# open Vim with tabs
+alias vim='vim -p'
+
+# arrow keys browse *local* history
+# https://superuser.com/questions/446594/separate-up-arrow-lookback-for-local-and-global-zsh-history
+bindkey "${terminfo[kcuu1]}" up-line-or-local-history
+bindkey "${terminfo[kcud1]}" down-line-or-local-history
+up-line-or-local-history() {
+    zle set-local-history 1
+    zle up-line-or-history
+    zle set-local-history 0
+}
+zle -N up-line-or-local-history
+down-line-or-local-history() {
+    zle set-local-history 1
+    zle down-line-or-history
+    zle set-local-history 0
+}
+zle -N down-line-or-local-history
