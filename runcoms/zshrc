@@ -24,6 +24,7 @@ VISUAL=vim
 
 # path
 PATH=~/Dropbox/bin:$PATH
+PATH=~/.local/bin:$PATH
 
 # direnv
 eval "$(direnv hook zsh)"
