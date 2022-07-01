@@ -61,3 +61,6 @@ down-line-or-local-history() {
     zle set-local-history 0
 }
 zle -N down-line-or-local-history
+
+# clipboard helper
+alias cb='xclip -selection clipboard'
