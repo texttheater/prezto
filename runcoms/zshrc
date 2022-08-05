@@ -65,3 +65,12 @@ zle -N down-line-or-local-history
 
 # clipboard helper
 alias cb='xclip -selection clipboard'
+
+# VPN helpers
+vpnup() {
+  (nordvpn connect ch && nordvpn set killswitch on) || nordvpn login
+}
+vpndn() {
+  nordvpn set killswitch off
+  nordvpn disconnect
+}
