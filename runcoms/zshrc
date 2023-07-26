@@ -43,6 +43,9 @@ alias tl="tmux list-sessions"
 # open Vim with tabs
 alias vim='vim -p'
 
+# default for watch
+alias watch='watch -n 1'
+
 # arrow keys browse *local* history
 # https://superuser.com/questions/446594/separate-up-arrow-lookback-for-local-and-global-zsh-history
 bindkey "${terminfo[kcuu1]}" up-line-or-local-history
