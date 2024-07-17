@@ -78,5 +78,12 @@ vpndn() {
   nordvpn disconnect
 }
 
+# pyenv helper
+mkenv() {
+  version=$1
+  name=$(basename $(pwd))
+  pyenv install -s $version && pyenv virtualenv $version $name && pyenv local $name
+}
+
 # opam configuration
 [[ ! -r /home/ke/.opam/opam-init/init.zsh ]] || source /home/ke/.opam/opam-init/init.zsh  > /dev/null 2> /dev/null
