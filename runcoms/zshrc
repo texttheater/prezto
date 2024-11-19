@@ -24,7 +24,7 @@ VISUAL=vim
 
 # path
 PATH=~/go/bin:$PATH
-PATH=~/Dropbox/bin:$PATH
+PATH=~/Nextcloud/bin:$PATH
 PATH=~/.local/bin:$PATH
 
 # direnv
