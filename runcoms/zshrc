@@ -28,7 +28,7 @@ PATH=~/Nextcloud/bin:$PATH
 PATH=~/.local/bin:$PATH
 
 # direnv
-#eval "$(direnv hook zsh)"
+eval "$(direnv hook zsh)"
 
 # pyenv
 export PYENV_ROOT="$HOME/.pyenv"
