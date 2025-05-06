@@ -78,6 +78,12 @@ vpndn() {
   nordvpn set killswitch off
   nordvpn disconnect
 }
+hhuvup() {
+  openvpn3 session-start --config HHU-VPN
+}
+hhuvdn() {
+  openvpn3 session-manage --config HHU-VPN --disconnect
+}
 
 # pyenv helper
 mkenv() {
