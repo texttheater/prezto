@@ -92,6 +92,11 @@ mkenv() {
   pyenv install -s $version && pyenv virtualenv $version $name && pyenv local $name
 }
 
+# WordNet helper
+wnov() {
+  wn $1 -over
+}
+
 # opam configuration
 [[ ! -r /home/ke/.opam/opam-init/init.zsh ]] || source /home/ke/.opam/opam-init/init.zsh  > /dev/null 2> /dev/null
 
