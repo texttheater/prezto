@@ -19,8 +19,8 @@ fi
 DEFAULT_USER=ke
 
 # editor
-EDITOR=vim
-VISUAL=vim
+EDITOR='nvim -p'
+VISUAL='nvim -p'
 
 # path
 PATH=~/go/bin:$PATH
@@ -45,7 +45,8 @@ t() {
 alias tl="tmux list-sessions"
 
 # open Vim with tabs
-alias vim='vim -p'
+alias vim='nvim -p'
+alias vi='nvim -p'
 
 # default for watch
 alias watch='watch -n 1'
