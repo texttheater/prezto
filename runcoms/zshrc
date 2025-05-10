@@ -72,7 +72,8 @@ alias cb='xclip -selection clipboard'
 
 # VPN helpers
 vpnup() {
-  (nordvpn connect ch && nordvpn set killswitch on) || nordvpn login
+  nordvpn login
+  nordvpn connect ch && nordvpn set killswitch on
 }
 vpndn() {
   nordvpn set killswitch off
