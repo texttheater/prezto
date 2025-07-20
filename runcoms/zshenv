@@ -11,4 +11,6 @@ if [[ ( "$SHLVL" -eq 1 && ! -o LOGIN ) && -s "${ZDOTDIR:-$HOME}/.zprofile" ]]; t
 fi
 
 # Rust
-. "$HOME/.cargo/env"
+if [ -d ~/.cargo ]; then
+  . "$HOME/.cargo/env"
+fi
