@@ -157,3 +157,8 @@ fi
 function apub() {
   curl $1 --header 'Accept: application/activity+json, application/ld+json, application/json'
 }
+
+# LibreOffice
+function lo() {
+  libreoffice "$1" &!
+}
