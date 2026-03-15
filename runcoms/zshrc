@@ -162,3 +162,8 @@ function apub() {
 function lo() {
   libreoffice "$1" &!
 }
+
+# Plann
+function pln() {
+  uvx plann "$@"
+}
