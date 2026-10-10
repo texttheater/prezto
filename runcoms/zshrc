@@ -167,3 +167,23 @@ function lo() {
 function pln() {
   uvx plann "$@"
 }
+
+# Text Editor
+function g() {
+  gnome-text-editor "$@" &!
+}
+
+# PDF viewer
+function v() {
+  evince "$@" &!
+}
+
+# Firefox
+function f() {
+  firefox "$@" &!
+}
+
+# Nautilus
+function n() {
+  nautilus "$@" &!
+}
