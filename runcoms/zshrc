@@ -78,14 +78,6 @@ zle -N down-line-or-local-history
 alias cb='xclip -selection clipboard'
 
 # VPN helpers
-vpnup() {
-  nordvpn login
-  nordvpn connect ch && nordvpn set killswitch on
-}
-vpndn() {
-  nordvpn set killswitch off
-  nordvpn disconnect
-}
 hhuvup() {
   openvpn3 session-start --config HHU-VPN
 }
