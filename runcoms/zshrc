@@ -177,5 +177,9 @@ function f() {
 
 # Nautilus
 function n() {
-  nautilus "$@" &!
+  if type "nautilus" > /dev/null; then
+    nautilus "$@" &!
+  else
+    cosmic-files "$@" &!
+  fi
 }
